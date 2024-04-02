@@ -2,7 +2,7 @@ const request = require("supertest");
 const server = require("../index");
 
 describe("Operando CRUD de cafés", () => {
-  it("Obteniendo un código", async () => {
+  it("Obteniendo un arreglo con al menos 1 objeto correctamente", async () => {
     const response = await request(server).get("/cafes").send();
 
     expect(response.statusCode).toBe(200);
